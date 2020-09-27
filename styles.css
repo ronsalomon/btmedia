@@ -1,0 +1,581 @@
+* {
+    font-family: Montserrat;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.top-bar {
+    width: 100%;
+    margin: auto;
+    background-color: #9e9e9e;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.8;
+    border-width: 0px;
+    border-style: solid;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.top-bar-right {
+    text-decoration: none;
+    border-right: 1px solid rgba(0,0,0,0.06);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.8;
+    border-width: 0px;
+    border-style: solid;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.top-bar-right:hover {
+    text-decoration: none;
+    border-right: 1px solid rgba(0,0,0,0.06);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #5b5b5b;
+    line-height: 1.8;
+    border-width: 0px;
+    border-style: solid;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.top-bar > .justify-content-start {
+    margin: auto;
+}
+
+.top-bar > .justify-content-end {
+    margin: auto;
+}
+
+.store {
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.contact {
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.button-default {
+    font-weight: 600;
+    background: #ccad39;
+    padding: 10px 25px 10px 25px;
+}
+
+.button-default:hover {
+    font-weight: 600;
+    background: white;
+    color: #ccad39;
+    text-align: center;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.fa {
+    font-size: 18px;
+    width: 50px;
+    opacity: 0.9;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    font-size: 18px;
+    width: 50px;
+    opacity: 0.9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+  }
+  
+/* Facebook */
+    .fa-facebook {
+    color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+    color: white;
+}
+
+/* YouTube */
+.fa-youtube-play {
+    color: white;
+}
+
+/* Social Media tooltip on hover */
+.tooltip > .tooltip-arrow {
+    border-bottom: 1px solid;
+}
+
+.tooltip .tooltip-inner { 
+    background-color: #23282d;
+    font-size: 12px;
+    opacity: .9;
+}
+
+.logo {
+    margin: 20px auto;
+    background: white;
+    width: 400px;
+    height: 71px;
+}
+
+.top_bar {
+    margin: 0 auto;
+    background-color: #9e9e9e;
+    line-height: 1.36;
+}
+
+
+/* ################## NAVGIGATION BAR ################## */
+
+.nav-menu-item:hover {
+    border-top: 2px solid #ccad39;
+}
+
+.nav-uppercase {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.navbar-light {
+    color: #5b5b5b;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.navbar a {
+    color: #545454;
+    display: block;
+    margin: 0px 50px -4px 0px;
+    border-top: 2px solid transparent;
+}
+
+
+.dropdown-menu {
+    margin: 0px auto 0px 0px;
+    border-radius: 0;
+    border-top: transparent;
+    border-top: 2px solid #ccad39;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.dropdown-menu:hover {
+    border-radius: 0;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.title {
+    font-family: Montserrat;
+    color: #5b5b5b;
+    padding: 10px 10px 10px 0px;
+    margin-left: -10px;
+}
+
+.title-megamenu {
+    font-family: Montserrat;
+    color: #5b5b5b;
+    padding: 20px 10px 20px 0px;
+    margin-left: 10px;
+}
+
+
+.col-md-3 {
+    border-right: 1px solid #e2e2e2;
+}
+
+.no-right-border {
+    border-right: none;
+}
+
+
+.col-megamenu {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.submenu-list {
+    color: #545454;
+    list-style-type: none;
+    position: relative;
+    padding: 0px 0px 5px 15px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.submenu-list:before {
+    content: "\25BA \0020";
+    font-size: 9px;
+    position: absolute;
+    top: 4px;
+    left: -1px;
+}
+
+.media-item-container {
+    margin-top: 0px;
+}
+
+.headphone {
+    font-size:24px;
+    margin-right: 10px;
+}
+
+/* ################## MEDIA BANNER ################## */
+
+.media-banner {
+    width: 100%;
+    margin: auto;
+    height: 675px;
+    background-attachment:fixed;
+    background-color:rgba(255,255,255,0);
+    background-image: url(https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Page-Header-B-copy-scaled.jpg);
+    background-position:center bottom;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;  
+}
+
+.devo-banner {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    background-attachment:fixed;
+    background-color:rgba(255,255,255,0);
+    background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Daily-Devotions-Online-WebPageBanner-R3.jpg');
+    background-position:center bottom;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover; 
+}
+
+.devo_tiles {
+    width:75%;
+    margin: 50px auto 10px auto;
+}
+
+.prayer-banner {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    background-attachment:fixed;
+    background-color:rgba(255,255,255,0);
+    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Tuesday-Prayer-Online-WebPageBanner-R3.jpg");
+    background-position:center bottom;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover; 
+}
+
+.prayer_tiles {
+    width:75%;
+    margin: 50px auto 10px auto;
+}
+
+.sunday-banner {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    background-attachment:fixed;
+    background-color:rgba(255,255,255,0);
+    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Sunday-Worship-Online-WebPageBanner-R3.jpg");
+    background-position:center bottom;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover; 
+}
+
+.sunday_tiles {
+    width:75%;
+    margin: 50px auto 10px auto;
+}
+
+.media-title {
+    margin: 100px auto 0px auto;
+    width: 600px;
+    height: 110px;
+    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Media-Center-Header.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.media-title:hover {
+    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Center-Header.png");
+    transition-delay: .2s;
+}
+
+.media-buttons {
+    margin: 0px auto;
+    background: transparent;
+} 
+
+.btn-outline-secondary {
+    border-radius: 2px;
+    width: 187px;
+    height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #777777;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all .2s;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    background: rgba(255,255,255,0.35);
+    margin: 25px;
+}
+
+.btn-outline-secondary:hover {
+    border-radius: 2px;
+    width: 187px;
+    height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #777777;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all .2s;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    background: #ffffff;
+}
+
+.zoom {
+    padding: 0;
+    transition: transform .4s; 
+    width: 100%;
+  }
+  
+  .zoom:hover {
+    overflow: hidden;
+    transition: transform 2s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    transform: scale(1.09); 
+  }
+
+a {
+    color: #5b5b5b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5b5b5b;
+    text-decoration: none;
+}
+
+.daily_devos {
+    margin-top: 25px;
+}
+
+.prayer_meeting {
+    margin-top: 25px;
+}
+
+.sunday_worship {
+    margin-top: 25px;
+}
+
+.single {
+    margin: 100px auto 0px 315px;
+    padding-left: 120px;
+    text-decoration: none;
+}
+
+.multiple {
+    margin: 100px 315px 0px auto;
+    padding-left: 30px;
+}
+
+.load_more.btn-outline-secondary {
+    width: 150px;
+}
+
+.load_more {
+    border-color: #707070; 
+    border-width: 1px; 
+    background-color: white; 
+    border-radius: 3px; 
+    color: #4a4e57; 
+    box-shadow: none !important; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    padding: 13px 19px; 
+    line-height: 15px; 
+    font-size: 13px;
+    }
+
+.load_more:hover {
+    border-color: white; 
+    border-width: 1px; 
+    background-color: #747474; 
+    border-radius: 3px; 
+    color: white; 
+    box-shadow: none !important; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    padding: 13px 19px; 
+    line-height: 15px; 
+    font-size: 13px;
+    }
+
+.separator {
+    width: 60%;
+    border-color:#e2e2e2;
+    border-top-width:2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px;
+}
+
+footer {
+    flex-wrap: wrap;
+    background-color: #1d242d;
+    width: 100%;
+    height: 136px;
+    opacity: .7;
+}
+
+.footer-contact {
+    display:block;
+    float: left;
+    padding: 25px 0px 0px 250px;
+}
+
+.footer-social {
+    display: block;
+    float: right;
+    padding: 50px 300px 0px 0px;
+}
+
+@media all and (min-width: 992px) {
+    .navbar{ padding-top: 0; padding-bottom: 0; }
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:600px; right:0; width:100%; padding:20px; }
+	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
+    .navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #5b5b5b;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu { margin: 0px auto auto 10px;  padding: 10px 0px 20px 30px;}
+}
+
+
+@media all and (max-width: 768px) {
+    .navbar{ padding-top: 0; padding-bottom: 0; }
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:150px; right:0; width:100%; padding:10px; }
+	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
+    .navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #5b5b5b;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu { margin: 0px auto auto 0px;  padding: 10px 0px 20px 30px;}
+    
+    .nav-menu-item:hover {
+        width: 100%;
+        border: none;
+    }
+    
+} 
+
+@media all and (max-width: 414px) {
+    .navbar{ padding-top: 0; padding-bottom: 0; }
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:150px; right:0; width:100%; padding:10px; }
+	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
+    .navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #5b5b5b;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu { margin: 0px auto auto 0px;  padding: 10px 0px 20px 30px;}
+    
+    .nav-menu-item:hover {
+        width: 100%;
+        border: none;
+    }
+    
+
+    .navbar-toggler {
+        padding: 10px 20px;
+        margin: 8px;
+    }
+
+    .footer-contact {
+        display: block;
+        float: left;
+        padding: 25px 0px 0px 50px;
+    }
+
+    .media-banner {
+        width: 100%;
+        margin: auto;
+        height: 400px;
+        background-image: url(https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Page-Header-B-copy-scaled.jpg);
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .media-title {
+        margin: auto;
+        width: 600px;
+        height: 80px;
+        background-image: url(https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Media-Center-Header.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .button-default {
+        font-weight: 600;
+        background: #ccad39;
+        padding: 20px;
+    }
+    
+}
