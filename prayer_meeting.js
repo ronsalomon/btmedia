@@ -18,7 +18,7 @@ fetchPrayer()
         const html = 
             `
             <a href="prayer_media.html">
-                <iframe src="https://cdn.jwplayer.com/v2/media/${main.mediaid}/poster.jpg?width=480" width="480" height="270" frameborder="0" scrolling="auto" allowfullscreen></iframe>
+                <img src="https://cdn.jwplayer.com/v2/media/${main.mediaid}/poster.jpg?width=480" width="480" height="270" frameborder="0" scrolling="auto" allowfullscreen></img>
                 <h5 style="width:480px; margin-top: 20px;">${main.title}</h5>
                 <p style="padding:40px auto 20px auto; width:480px;">${main.description}</p>
             </a>
@@ -44,7 +44,7 @@ fetchPrayer()
                 const html = 
                     `
                     <a href="prayer_media.html"><div class="d-flex align-self-center align-items-center justify-content-center" style="width:480px;">
-                            <iframe src="https://cdn.jwplayer.com/v2/media/${prayer.mediaid}/poster.jpg?width=120" width="120" height="80" frameborder="0"></iframe>
+                            <img src="https://cdn.jwplayer.com/v2/media/${prayer.mediaid}/poster.jpg?width=120" width="120" height="80" frameborder="0"></img>
                             <h5 style="width:480px; padding-left:15px;">${prayer.title}</h5>
                         </div>
                         <p style="padding:40px auto 20px auto; width:480px;">${prayer.description}</p>
