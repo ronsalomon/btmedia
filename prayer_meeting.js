@@ -18,21 +18,21 @@ fetchPrayer()
         const current_html = 
             `
                 <a href="prayer_media.html">
-                    <img class="img-fluid" src ="https://cdn.jwplayer.com/v2/media/${current.mediaid}/poster.jpg?width=480" width="480" height="100%"; frameborder="0" scrolling="auto" allowfullscreen></img>
-                    <h5 style="padding: 20px 0px 20px 0px;">${current.title}</h5>
+                    <img class="img-fluid" src ="https://cdn.jwplayer.com/v2/media/${current.mediaid}/poster.jpg" width="600" height="100%"; frameborder="0" scrolling="auto" allowfullscreen></img>
+                    <h3 style="font-weight:500; padding:20px 0px 20px 0px;">${current.title}</h3>
                 </a>
                 <p>${current.description}</p>
             `;
         document.querySelector('#media_prayer_current').insertAdjacentHTML('afterbegin', current_html);
 
-        // display (3) most recent after current
+        // display (3) most recent prayer meetings after current
         data.playlist.slice(1, 4).reverse().forEach(recent => {
         const recent_list_html = 
             `
                 <a href="prayer_media.html">
-                    <div class="multi_list">
-                        <img class="img-fluid" src="https://cdn.jwplayer.com/v2/media/${recent.mediaid}/poster.jpg?width=120" width="120" height="100" frameborder="0"></img>
-                        <h5 style="padding-left:15px;">${recent.title}</h5>
+                    <div class="multiple_list">
+                        <img class="img-fluid" src="https://cdn.jwplayer.com/v2/media/${recent.mediaid}/poster.jpg?width=320" width="180" height="112" frameborder="0"></img>
+                        <h3 style="font-weight:500; padding-left:15px;">${recent.title}</h3>
                     </div>
                 </a>
                 <p style="padding: 20px 0px 20px 0px;">${recent.description}</p>
@@ -86,7 +86,7 @@ fetchPrayerMainPage()
         document.querySelector('#prayer_desc').insertAdjacentHTML('afterbegin', description_html);
         
         // display the most recent (8) prayer meetings after current (320 x 180)
-        data.playlist.slice(1, 9).reverse().forEach(tile => {
+        data.playlist.reverse().forEach(tile => {
         const tile_html = 
             `
             <div class="p-2" style="width:320px; margin-top: 20px;">

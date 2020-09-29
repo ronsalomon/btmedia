@@ -1,6 +1,6 @@
 // fetch daily devotionals
 const fetchDailyDevos = async () => {
-    const response = await fetch("https://cdn.jwplayer.com/v2/playlists/sX5mUe4T?poster_width=480"); 
+    const response = await fetch("https://cdn.jwplayer.com/v2/playlists/sX5mUe4T"); 
     if(response.status !== 200) {
         throw new Error('Cannot fetch the data');
     }
@@ -18,8 +18,8 @@ fetchDailyDevos()
         const current_html = 
             `
                 <a href="devotional_media.html">
-                    <img class="img-fluid" src ="https://cdn.jwplayer.com/v2/media/${current.mediaid}/poster.jpg?width=480" width="480" height="100%"; frameborder="0" scrolling="auto" allowfullscreen></img>
-                    <h5 style="padding: 20px 0px 20px 0px;">${current.title}</h5>
+                    <img class="img-fluid" src ="https://cdn.jwplayer.com/v2/media/${current.mediaid}/poster.jpg" width="600" height="100%"; frameborder="0" scrolling="auto" allowfullscreen></img>
+                    <h3 style="font-weight:500; padding: 20px 0px 20px 0px;">${current.title}</h3>
                 </a>
                 <p>${current.description}</p>
             `;
@@ -30,12 +30,12 @@ fetchDailyDevos()
         const recent_list_html = 
             `
                 <a href="devotional_media.html">
-                    <div class="multi_list">
-                        <img class="img-fluid" src="https://cdn.jwplayer.com/v2/media/${recent.mediaid}/poster.jpg?width=120" width="120" height="100" frameborder="0"></img>
-                        <h5 style="padding-left: 20px;">${recent.title}</h5>
+                    <div class="multiple_list">
+                        <img class="img-fluid" src="https://cdn.jwplayer.com/v2/media/${recent.mediaid}/poster.jpg?width=320" width="180" height="112" frameborder="0"></img>
+                        <h3 style="font-weight:500; padding-left: 20px;">${recent.title}</h3>
                     </div>
                 </a>
-                <p style="padding: 20px 0px 20px 0px;">${recent.description}</p>
+                <p style="padding:20px 0px 20px 0px;">${recent.description}</p>
             `;
         document.querySelector('#media_devo_list').insertAdjacentHTML('afterbegin', recent_list_html);
         });
@@ -86,7 +86,7 @@ fetchDevoMainPage()
         document.querySelector('#devo_desc').insertAdjacentHTML('afterbegin', description_html);
         
         // display the most recent (8) devos after current (320 x 180)
-        data.playlist.slice(1, 9).reverse().forEach(tile => {
+        data.playlist.reverse().forEach(tile => {
         const tile_html = 
             `
                 <div class="p-2" style="width:320px; margin-top: 20px;">
