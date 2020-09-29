@@ -18,7 +18,7 @@ fetchSundayWorship()
     const current_html = 
         `
             <a href="sunday_media.html">
-                <img src ="https://cdn.jwplayer.com/v2/media/${current.mediaid}/poster.jpg?width=480" width="480" height="270"; class="img-fluid" frameborder="0" scrolling="auto" allowfullscreen></img>
+                <img class="img-fluid" src ="https://cdn.jwplayer.com/v2/media/${current.mediaid}/poster.jpg?width=480" width="480" height="100%" frameborder="0" scrolling="auto" allowfullscreen></img>
                 <h5 style="padding: 20px 0px 20px 0px;">${current.title}</h5>
             </a>
             <p>${current.description}</p>
@@ -31,7 +31,7 @@ fetchSundayWorship()
         `
             <a href="sunday_media.html">
                 <div class="multi_list">
-                    <img src="https://cdn.jwplayer.com/v2/media/${recent.mediaid}/poster.jpg?width=120" width="120" height="80" class="img-fluid" frameborder="0"></img>
+                    <img class="img-fluid" src="https://cdn.jwplayer.com/v2/media/${recent.mediaid}/poster.jpg?width=120" width="120" height="100" class="img-fluid" frameborder="0"></img>
                     <h5 style="padding-left: 20px;">${recent.title}</h5>
                 </div>
             </a>
