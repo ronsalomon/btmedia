@@ -1,4 +1,4 @@
-// fetch Daily Devotionals
+// fetch daily devotionals
 const fetchDailyDevos = async () => {
     const response = await fetch("https://cdn.jwplayer.com/v2/playlists/sX5mUe4T?poster_width=480"); 
     if(response.status !== 200) {
@@ -8,60 +8,42 @@ const fetchDailyDevos = async () => {
     return data;
 }
 
+// JW Delivery API - Main Media Page
 fetchDailyDevos()
     .then(data => {
 
-        // display latest devotional
-        const main = data.playlist[0];
-        console.log(main);
+        const current = data.playlist[0];
 
-        const html = 
+        // display current devotional
+        const current_html = 
             `
-            <a href="devotional_media.html">
-                <img src ="https://cdn.jwplayer.com/v2/media/${main.mediaid}/poster.jpg?width=480" width="480" height="270"; frameborder="0" scrolling="auto" allowfullscreen></img>
-                <h5 style="width:480px; margin-top: 20px;">${main.title}</h5>
-                <p style="padding: 40px auto 20px auto; width:480px;">${main.description}</p>
-            </a>
+                <a href="devotional_media.html">
+                    <img src ="https://cdn.jwplayer.com/v2/media/${current.mediaid}/poster.jpg?width=480" width="480" height="270"; class="img-fluid" frameborder="0" scrolling="auto" allowfullscreen></img>
+                    <h5 style="padding: 20px 0px 20px 0px;">${current.title}</h5>
+                </a>
+                <p>${current.description}</p>
             `;
-        document.querySelector('#devo_current').insertAdjacentHTML('afterbegin', html);
-    }).catch(err => console.log('rejected', err.message));
+        document.querySelector('#media_devo_current').insertAdjacentHTML('afterbegin', current_html);
 
-
-// fetch Daily Devotionals Playlist
-const fetchDevosPlayList = async () => {
-    const response = await fetch("https://cdn.jwplayer.com/v2/playlists/sX5mUe4T?poster_width=320"); 
-    if(response.status !== 200) {
-        throw new Error('Cannot fetch the data');
-    }
-    const data = await response.json();
-    return data;
-}
-    
-fetchDevosPlayList()
-    .then(data => {
-        const main = data.playlist[0];
-        console.log(main);
-        
-        // capture date prefix from titles
-        data.playlist.slice(1, 4).reverse().forEach(devos => {
-            
-            const html = 
-                `
-                    <a href="devotional_media.html"><div class="d-flex align-self-center align-items-center justify-content-center" style="width:480px;">
-                        <img src="https://cdn.jwplayer.com/v2/media/${main.mediaid}/poster.jpg?width=120" width="120" height="80" frameborder="0"></img>
-                        <h5 style="width:480px; padding-left:15px;">${devos.title}</h5>
-                        </div>
-                        <p style="padding: 10px 0px 10px 0px; width:480px;">${devos.description}</p>
-                    </a>
-                ` ;
-        document.querySelector('#devo_list').insertAdjacentHTML('afterbegin', html);
+        // display (3) most recent devotionals after current
+        data.playlist.slice(1, 4).reverse().forEach(recent => {
+        const recent_list_html = 
+            `
+                <a href="devotional_media.html">
+                    <div class="multi_list">
+                        <img src="https://cdn.jwplayer.com/v2/media/${recent.mediaid}/poster.jpg?width=120" width="120" height="80" class="img-fluid" frameborder="0"></img>
+                        <h5 style="padding-left: 20px;">${recent.title}</h5>
+                    </div>
+                </a>
+                <p style="padding: 20px 0px 20px 0px;">${recent.description}</p>
+            `;
+        document.querySelector('#media_devo_list').insertAdjacentHTML('afterbegin', recent_list_html);
         });
     }).catch(err => console.log('rejected', err.message));
 
 
 
-
-// fetch for Daily Devotionals Page
+// fetch for Daily Devotionals Media Page
 const fetchDevoMainPage = async () => {
     const response = await fetch("https://cdn.jwplayer.com/v2/playlists/sX5mUe4T"); 
     if(response.status !== 200) {
@@ -71,41 +53,47 @@ const fetchDevoMainPage = async () => {
     return data;
 }
 
+// JW Delivery API - Daily Devotional Media Page
 fetchDevoMainPage()
     .then(data => {
 
-        // display latest devotional
-        const devo_page = data.playlist[0];
-        const devo_page_player_html = 
+        // capture current devotional
+        const current = data.playlist[0];
+    
+        // display current devotional (865 x 486)
+        const devo_page_html = 
             `
-            <div style="position:relative; overflow:hidden; margin-top:100px;" class="d-flex justify-content-center align-items-center">
-                <iframe src ="https://cdn.jwplayer.com/players/${devo_page.mediaid}-40YHK51f.html" width="865" height="486"; frameborder="0" scrolling="auto" allowfullscreen></iframe>
-            </div>
+                <div>
+                    <iframe class="main_player" src ="https://cdn.jwplayer.com/players/${current.mediaid}-40YHK51f.html" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></iframe>
+                <div>
             `;
-        document.querySelector('#devo_main_player').insertAdjacentHTML('afterbegin', devo_page_player_html);
+        document.querySelector('#devo_page_current').insertAdjacentHTML('afterbegin', devo_page_html);
 
-        const title_desc = data.playlist[0];
-        const title_desc_html = 
+        // display video page title
+        const title = data.playlist[0];
+        const title_html = 
             `
-            <div style="width: 865px; margin:10px 0px 30px 520px;">
-                <h4>${title_desc.title}</h4>
-            </div>
-            <div style="width: 865px; margin-left:520px;">
-                <p>${title_desc.description}</p>
-            </div>
+                <p><h4>${title.title}</h4></p>
             `;
-        document.querySelector('#devo_title_desc').insertAdjacentHTML('afterbegin', title_desc_html);
+        document.querySelector('#devo_title').insertAdjacentHTML('afterbegin', title_html);
+
+        // display video page description
+        const desc = data.playlist[0];
+        const description_html = 
+            `
+                <p>${desc.description}</p>
+            `;
+        document.querySelector('#devo_desc').insertAdjacentHTML('afterbegin', description_html);
         
-        // capture date prefix from titles
-        data.playlist.slice(1, 9).reverse().forEach(devo_tile => {
-            
-            const devo_tile_html = 
-                `
-                    <div class="p-2" style="width:320px; margin-top: 20px;">
-                    <iframe src ="https://cdn.jwplayer.com/players/${devo_tile.mediaid}-40YHK51f.html" width="320" height="180"; frameborder="0" scrolling="auto" allowfullscreen></iframe>
-                        <h6>${devo_tile.title}</h6>
-                    </div>
-                ` ;
-        document.querySelector('#devo_tile_list').insertAdjacentHTML('afterbegin', devo_tile_html);
+        // display the most recent (8) devos after current (320 x 180)
+        data.playlist.slice(1, 9).reverse().forEach(tile => {
+        const tile_html = 
+            `
+                <div class="p-2" style="width:320px; margin-top: 20px;">
+                    <iframe src ="https://cdn.jwplayer.com/players/${tile.mediaid}-40YHK51f.html" width="320" height="180"; frameborder="0" scrolling="auto" allowfullscreen></iframe>
+                    <h6>${tile.title}</h6>
+                </div>
+            ` ;
+        document.querySelector('#devo_tile_list').insertAdjacentHTML('afterbegin', tile_html);
         });
-    }).catch(err => console.log('rejected', err.message));
+    }).catch(err => console.log('rejected', err.message));   

@@ -5,7 +5,6 @@
     padding: 0;
 }
 
-
 .top-bar {
     width: 100%;
     margin: auto;
@@ -250,18 +249,18 @@
 
 .headphone {
     font-size:24px;
-    margin-right: 10px;
+    margin-top: 20px;
+    margin-right: 7px;
 }
 
 /* ################## MEDIA BANNER ################## */
 
-.media-banner {
+.banner {
     width: 100%;
     margin: auto;
-    height: 675px;
+    height: 600px;
     background-attachment:fixed;
     background-color:rgba(255,255,255,0);
-    background-image: url(https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Page-Header-B-copy-scaled.jpg);
     background-position:center bottom;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
@@ -270,65 +269,23 @@
     background-size:cover;  
 }
 
-.devo-banner {
-    width: 100%;
-    margin: auto;
-    height: 500px;
-    background-attachment:fixed;
-    background-color:rgba(255,255,255,0);
-    background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Daily-Devotions-Online-WebPageBanner-R3.jpg');
-    background-position:center bottom;
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover; 
+.media-banner {
+    height: 675px;
+    background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Page-Header-B-copy-scaled.jpg');
 }
 
-.devo_tiles {
-    width:75%;
-    margin: 50px auto 10px auto;
+.devo-banner {
+    background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Daily-Devotions-Online-WebPageBanner-R3.jpg');
 }
 
 .prayer-banner {
-    width: 100%;
-    margin: auto;
-    height: 500px;
-    background-attachment:fixed;
-    background-color:rgba(255,255,255,0);
-    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Tuesday-Prayer-Online-WebPageBanner-R3.jpg");
-    background-position:center bottom;
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover; 
-}
-
-.prayer_tiles {
-    width:75%;
-    margin: 50px auto 10px auto;
+    background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Tuesday-Prayer-Online-WebPageBanner-R3.jpg');
 }
 
 .sunday-banner {
-    width: 100%;
-    margin: auto;
-    height: 500px;
-    background-attachment:fixed;
-    background-color:rgba(255,255,255,0);
-    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Sunday-Worship-Online-WebPageBanner-R3.jpg");
-    background-position:center bottom;
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover; 
+    background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Sunday-Worship-Online-WebPageBanner-R3.jpg');
 }
 
-.sunday_tiles {
-    width:75%;
-    margin: 50px auto 10px auto;
-}
 
 .media-title {
     margin: 100px auto 0px auto;
@@ -411,27 +368,42 @@ a:hover {
     text-decoration: none;
 }
 
-.daily_devos {
-    margin-top: 25px;
+.section {
+    width: 100%;
+    margin-top: 100px;
 }
 
-.prayer_meeting {
-    margin-top: 25px;
+.main_player {
+    width: 865px;
+    height: 486px;
+    margin: 50px auto 20px auto;
 }
 
-.sunday_worship {
-    margin-top: 25px;
+.main_player_title_desc {
+    width: 865px;
+    margin: 20px auto 40px auto;   
+}
+
+.title_desc {
+    margin: auto;
+    text-align: left;
 }
 
 .single {
-    margin: 100px auto 0px 315px;
-    padding-left: 120px;
+    margin: 20px;
     text-decoration: none;
+    
 }
 
 .multiple {
-    margin: 100px 315px 0px auto;
-    padding-left: 30px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.multi_list {
+    display: flex;
+    align-items: center;
+    align-self: center;
 }
 
 .load_more.btn-outline-secondary {
@@ -439,6 +411,7 @@ a:hover {
 }
 
 .load_more {
+    margin-top: 50px;
     border-color: #707070; 
     border-width: 1px; 
     background-color: white; 
@@ -466,14 +439,20 @@ a:hover {
     font-size: 13px;
     }
 
-.separator {
+.divider {
     width: 60%;
     border-color:#e2e2e2;
     border-top-width:2px;
     margin-left: auto;
     margin-right: auto;
-    margin-top:50px;
+    margin-top:25px;
 }
+
+.tiles {
+    width: 75%;
+    margin: 30px auto 10px auto;
+}
+
 
 footer {
     flex-wrap: wrap;
@@ -520,6 +499,17 @@ footer {
     .nav-menu-item:hover {
         width: 100%;
         border: none;
+    }
+
+    .main_player {
+        width: 480px;
+        height: 270px;
+        margin: 10px auto 10px auto;
+    }
+    
+    .main_player_title_desc {
+        width: 480px;
+        margin: 10px auto 10px auto;   
     }
     
 } 
@@ -576,6 +566,17 @@ footer {
         font-weight: 600;
         background: #ccad39;
         padding: 20px;
+    }
+
+    .main_player {
+        width: 320px;
+        height: 180px;
+        margin: 10px auto 10px auto;
+    }
+    
+    .main_player_title_desc {
+        width: 320px;
+        margin: 10px auto 10px auto;   
     }
     
 }
