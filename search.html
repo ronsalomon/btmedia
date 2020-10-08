@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prayer Meeting</title>
+    <title>Search Media Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -15,7 +16,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Social Media Header -->
     <div class="d-flex top-bar">
         <div class="d-flex justify-content-start">
@@ -30,9 +30,9 @@
         </div>
     </div>
     <div class="sticky-top header_shadow">
-        <div class="d-flex justify-content-center img-fluid logo">
-            <a href="index.html"><img src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Brooklyn-Tabernacle-Logo-800.png" class="img-fluid" width="400" height="71" alt="BT Online Logo"></a>
-        </div>
+            <div class="d-flex justify-content-center img-fluid logo">
+                <a href="index.html"><img src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Brooklyn-Tabernacle-Logo-800.png" class="img-fluid" width="400" height="71" alt="BT Online Logo"></a>
+            </div>
         <!---- Responsive Navbar - Right Hamburger Menu ---->
         <nav class="navbar navbar-expand-xl navbar-light">
             <a class="navbar-brand" href="#"></a>
@@ -117,36 +117,17 @@
             </div> <!-- navbar-collapse.// -->
         </nav>
     </div>
-    <div class="d-flex justify-content-center img-fluid banner prayer-banner"></div>
-
-    <!-- Output from JW Delivery API -->
-    <div id="prayer_page_current" class="d-flex justify-content-center align-items-center"></div>
-
-    <div class="divider"><hr /></div>
-
-    <div id="prayer_tile_list" class="d-flex flex-row flex-wrap justify-content-around align-items-center tiles"></div>
-
-    <script>
-        // Prevent closing from click inside dropdown
-        $(document).on('click', '.dropdown-menu', function (e) {
-            e.stopPropagation();
-        });
-    </script>
-    <script>$(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-    </script>
-    <footer>
-        <div class="flex-row justify-content-center">
-            <div class="d-flex justify-content-start footer-contact">
-                <img width="300" height="76" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-300x76.png" class="image wp-image-3631 attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-200x51.png 200w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-300x76.png 300w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-400x101.png 400w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-600x152.png 600w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-768x194.png 768w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-800x202.png 800w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-1024x259.png 1024w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-1200x304.png 1200w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-1536x389.png 1536w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy.png 1695w" sizes="(max-width: 300px) 100vw, 300px">
-            </div>
-            <div class="d-flex justify-content-end footer-social">
-                <span><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="bottom" title="facebook"></a></span>
-                <span><a href="#" class="fa fa-instagram" data-toggle="tooltip" data-placement="bottom" title="instagram"></a></span>
-                <span><a href="#" class="fa fa-youtube-play" data-toggle="tooltip" data-placement="bottom" title="youtube"></a></span>
-            </div>
+    <form id="search-form" class="form-inline d-flex justify-content-center search_form">
+        <div class="form-group">
+            <input class="btn btn-secondary submit_button" type="submit" value="Search"/>
+            <input class="form-control form_input" type="text" id="term" onfocus="this.value=''" value="Search media for title, speaker, keyword, etc..."/>
         </div>
-    </footer>
-    <script src="prayer_meeting.js"></script>
+    </form>
+    <div class="divider-search"><hr /></div>
+    <div id="search_term" class="search_term col-md-8"></div>
+    <div id="search_results" class="align-items-center align-self-center search_results col-md-8"></div>
+    <div id="category" class="col-md-8"></div>
+    <div id="read_more" class="col-md-8"></div>
+    <script src="search.js"></script>
 </body>
+</html>

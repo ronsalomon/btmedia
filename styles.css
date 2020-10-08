@@ -150,12 +150,12 @@
     line-height: 1.36;
 }
 
-
 /* ################## NAVGIGATION BAR ################## */
 
 .nav-menu-item:hover {
     border-top: 2px solid #ccad39;
 }
+
 
 .nav-uppercase {
     font-family: Montserrat;
@@ -165,6 +165,7 @@
     font-style: normal;
     text-transform: uppercase;
 }
+
 
 .navbar-light {
     color: #5b5b5b;
@@ -186,8 +187,7 @@
     border-radius: 0;
     border-top: transparent;
     border-top: 2px solid #ccad39;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    border-left: 1px solid #e2e2e2;
 }
 
 .dropdown-menu:hover {
@@ -197,6 +197,7 @@
 }
 
 .title {
+    width: 100px;
     font-family: Montserrat;
     color: #5b5b5b;
     padding: 10px 10px 10px 0px;
@@ -206,33 +207,45 @@
 .title-megamenu {
     font-family: Montserrat;
     color: #5b5b5b;
-    padding: 20px 10px 20px 0px;
-    margin-left: 10px;
-}
-
-
-.col-md-3 {
-    border-right: 1px solid #e2e2e2;
+    padding: 20px 0px 20px 11px;
+    letter-spacing: 0px;
+    font-style: normal;
 }
 
 .no-right-border {
     border-right: none;
 }
 
-
 .col-megamenu {
-    margin-left: 5px;
-    margin-bottom: 10px;
+    margin-top: -10px;
+    margin-bottom: -18px;
+    border-right: 1px solid #e2e2e2;
+    padding-bottom: 30px;
 }
+
 
 .submenu-list {
     color: #545454;
     list-style-type: none;
     position: relative;
     padding: 0px 0px 5px 15px;
-    font-size: 13px;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.submenu-list:hover {
+    color: #545454;
+    list-style-type: none;
+    position: relative;
+    padding: 0px 0px 5px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    font-style: normal;
 }
 
 .submenu-list:before {
@@ -247,10 +260,63 @@
     margin-top: 0px;
 }
 
-.headphone {
-    font-size:24px;
-    margin-top: 20px;
-    margin-right: 7px;
+.header_shadow {
+    background: white;
+    box-shadow: 0 20px 50px -2px rgba(0,0,0,.14);
+}
+
+/* ################## Media Search Page ##################  */
+
+.submit_button {
+    width: 120px; 
+    height: 50px; 
+    margin-bottom: 10px; 
+    margin-right: 5px;
+}
+
+.form_input {
+    height: 50px;
+    min-width:474px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.search_form {
+    margin: 40px;
+}
+
+
+.search_term {
+    margin: 40px auto 40px auto;
+}
+
+.search_results {
+    margin: 40px auto 50px auto;
+}
+
+.search_title_desc {
+    padding-left: 20px;
+}
+
+.divider-search {
+    width: 65%;
+    border-color:#e2e2e2;
+    border-top-width:2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:25px;
+}
+
+.search_divider_top {
+    width: 100%;
+    border-color:#e2e2e2;
+    border-top-width:2px;
+}
+
+.search_divider_bottom {
+    width: 100%;
+    border-color:#e2e2e2;
+    border-bottom-width:2px;
 }
 
 /* ################## MEDIA BANNERS ################## */
@@ -258,7 +324,7 @@
 .banner {
     width: 100%;
     margin: auto;
-    height: 600px;
+    height: 500px;
     background-attachment:fixed;
     background-color:rgba(255,255,255,0);
     background-position: center;
@@ -269,8 +335,9 @@
     background-size:cover;  
 }
 
+
 .media-banner {
-    height:800px;
+    height:750px;
     margin: 0px auto 0px auto;
     background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Page-Header-B-copy-scaled.jpg');
     background-position: bottom;
@@ -278,17 +345,26 @@
     filter: blur(0px);
 }
 
+
+.audio-banner {
+    background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Audio-Sermons-Online-WebPageBanner-R3.jpg');
+}
+
+
 .devo-banner {
     background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Daily-Devotions-Online-WebPageBanner-R3.jpg');
 }
+
 
 .prayer-banner {
     background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Tuesday-Prayer-Online-WebPageBanner-R3.jpg');
 }
 
+
 .sunday-banner {
     background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Sunday-Worship-Online-WebPageBanner-R3.jpg');
 }
+
 
 .media-title {
     margin: 0px auto 0px auto;
@@ -300,15 +376,18 @@
     background-size: contain;
 }
 
+
 .media-title:hover {
     background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Center-Header.png");
     transition-delay: .2s;
 }
 
+
 .media-buttons {
     margin: 0px auto;
     background: transparent;
 } 
+
 
 .btn-outline-secondary {
     border-radius: 2px;
@@ -330,6 +409,7 @@
     margin: 25px;
 }
 
+
 .btn-outline-secondary:hover {
     border-radius: 2px;
     width: 187px;
@@ -349,23 +429,46 @@
     background: #ffffff;
 }
 
-.zoom {
-    padding: 0;
-    transition: transform .4s; 
+.zoom-container {
+    margin-left: 10px;
     width: 100%;
-  }
-  
-  .zoom:hover {
+    height: 100%;
+    border-radius: 7px;
     overflow: hidden;
-    transition: transform 2s, filter 1.5s ease-in-out;
-    transform-origin: center center;
-    transform: scale(1.09); 
   }
+
+  .zoom-container-no-border {
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+.zoom {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 2s ease-out;
+    -moz-transition: 2s ease-out;
+    -o-transition: 2s ease-out;
+    -ms-transition: 2s ease-out;
+    transition: 2s ease-out;
+}
+
+
+.zoom:hover {
+    transition: transform 1s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    transform: scale(1.1); 
+}
+
 
 a {
     color: #5b5b5b;
     text-decoration: none;
 }
+
 
 a:hover {
     color: #5b5b5b;
@@ -375,74 +478,91 @@ a:hover {
 
 /* ################## Individual Media pages ##################  */
 .main_player {
-    width: 865px;
     height: 486px;
     margin: 50px auto 20px auto;
 }
 
+
 .main_player_title_desc {
-    width: 865px;
     margin: 20px auto 40px auto;   
 }
+
 
 .title_desc {
     margin: auto;
     text-align: left;
 }
 
-.single {
-    width: 600px;
-    margin: 150px 20px 0px 20px;
-    text-decoration: none;
-    
-}
 
-.multiple {
-    width: 600px;
-    margin: 150px 20px 0px 20px;
+.single_devo {
+    margin: 140px 35px 10px 35px;
     text-decoration: none;
 }
 
-.multiple_list {
-    display: flex;
-    align-items: center;
-    align-self: center;
+
+.multiple_devo {
+    margin: 140px 35px 10px 35px;
+    text-decoration: none;
 }
 
-.load_more.btn-outline-secondary {
-    width: 150px;
+.single_prayer {
+    margin: 130px 35px 10px 35px;
+    text-decoration: none;
+}
+
+
+.multiple_prayer {
+    margin: 130px 35px 10px 35px;
+    text-decoration: none;
+}
+
+.single_sunday {
+    margin: 130px 35px 10px 35px;
+    text-decoration: none;
+}
+
+
+.multiple_sunday {
+    margin: 130px 35px 10px 35px;
+    text-decoration: none;
 }
 
 .load_more {
-    border-color: #707070; 
-    border-width: 1px; 
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 161px;
+    border-color: #777777;
+    border-width: 2px;
+    border-radius: 2px;
     background-color: white; 
-    border-radius: 4px; 
     color: #4a4e57; 
     box-shadow: none !important; 
     letter-spacing: 1px; 
     text-transform: uppercase; 
-    padding: 13px 19px; 
-    line-height: 15px; 
-    font-size: 13px;
-    }
+    font-size: 14px;
+    font-weight: 400;
+}
+
 
 .load_more:hover {
-    border-color: white; 
-    border-width: 1px; 
-    background-color: #747474; 
-    border-radius: 3px; 
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 161px;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 2px;
+    background-color: #777777;
     color: white; 
     box-shadow: none !important; 
     letter-spacing: 1px; 
     text-transform: uppercase; 
-    padding: 13px 19px; 
-    line-height: 15px; 
-    font-size: 13px;
-    }
+    font-size: 14px;
+    font-weight: 400;
+}
+
 
 .divider {
-    width: 60%;
+    width: 72%;
     border-color:#e2e2e2;
     border-top-width:2px;
     margin-left: auto;
@@ -450,18 +570,18 @@ a:hover {
     margin-top:25px;
 }
 
+
 .tiles {
     width: 75%;
-    margin: 30px auto 10px auto;
+    margin: 30px auto 50px auto;
 }
 
 
 footer {
     flex-wrap: wrap;
-    background-color: #1d242d;
+    background-color: #5e5e5e;
     width: 100%;
     height: 136px;
-    opacity: .7;
 }
 
 .footer-contact {
@@ -476,23 +596,24 @@ footer {
     padding: 50px 300px 0px 0px;
 }
 
+@media (min-width: 1200px) {
+.navbar-expand-xl .navbar-nav .nav-link {
+    padding-top: 8px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 78px;
+    }
+}
+
 @media all and (min-width: 992px) {
     .navbar{ padding-top: 0; padding-bottom: 0; }
 	.navbar .has-megamenu{position:static!important;}
-	.navbar .megamenu{left:600px; right:0; width:100%; padding:20px; }
+	.navbar .megamenu{left:600px; right:0; width:100%; padding:0px;}
 	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
     .navbar .nav-item .dropdown-menu{ display: none; }
-	.navbar .nav-item:hover .nav-link{ color: #5b5b5b;  }
+	.navbar .nav-item:hover .nav-link{ color: #ccad39; }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
     .navbar .nav-item .dropdown-menu { margin: 0px auto auto 10px;  padding: 10px 0px 20px 30px;}
-
-    .section {
-        width: 480px;
-    }
-
-    .single {
-        width: 480px;
-    }
 
 }
 
@@ -509,10 +630,6 @@ footer {
     .nav-menu-item:hover {
         width: 100%;
         border: none;
-    }
-
-    .section {
-        width: 480px;
     }
 
     .single {
@@ -547,7 +664,6 @@ footer {
         border: none;
     }
     
-
     .navbar-toggler {
         padding: 10px 20px;
         margin: 8px;
@@ -597,9 +713,6 @@ footer {
         margin: 10px auto 10px auto;   
     }
 
-    .section {
-        width: 320px;
-    }
 
     .single {
         width: 320px;
