@@ -84,7 +84,4 @@ fetchPrayerMainPage()
             ` ;
         document.querySelector('#prayer_tile_list').insertAdjacentHTML('afterbegin', tile_html);
         });
-    }).catch(err => console.log('rejected', err.message));   
-
-
-    const clickImage = document.querySelector('click', )
+    }).catch(err => console.log('rejected', err.message));
