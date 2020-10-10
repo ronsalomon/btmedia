@@ -117,12 +117,12 @@
             </div> <!-- navbar-collapse.// -->
         </nav>
     </div>
-    <form id="search-form" class="form-inline d-flex justify-content-center search_form">
-        <div class="form-group">
-            <input class="btn btn-secondary submit_button" type="submit" value="Search"/>
-            <input class="form-control form_input" type="text" id="term" onfocus="this.value=''" value="Search media for title, speaker, keyword, etc..."/>
+    <div id="search-form" class="media_search">
+        <div class="form-group has-search">
+          <span class="fa fa-search form-control-feedback" type="submit" value="Search"></span>
+          <input class="form-control form_input" type="text" id="term" onfocus="this.value=''" value="Search media for title, speaker, keyword, etc...">
         </div>
-    </form>
+    </div>
     <div class="divider-search"><hr /></div>
     <div id="search_term" class="search_term col-md-8"></div>
     <div id="search_results" class="align-items-center align-self-center search_results col-md-8"></div>
