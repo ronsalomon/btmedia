@@ -267,18 +267,38 @@
 
 /* ################## Media Search Page ##################  */
 
-.submit_button {
-    width: 120px; 
-    height: 50px; 
-    margin-bottom: 10px; 
-    margin-right: 5px;
+.media_search {
+    width: 30%;
+    margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    width: 50px;
+    font-size: 16px;
+    color: #9ea0a4;
+    padding: 7px 0px 0px 10px;
+    padding-right: 10px;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
 }
 
 .form_input {
+    font-size: 16px;
+    color: #9ea0a4;
     height: 50px;
-    min-width:474px;
-    margin-bottom: 10px;
-    text-align: center;
+    padding-left: 40px;
 }
 
 .search_form {
