@@ -75,7 +75,7 @@
                                 <div class="col-md-3">
                                     <div class="col-megamenu">
                                         <h6 class="title-megamenu">Daily Devotions</h6>
-                                        <a href="devotional_media.html"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Daily-Devotions-Online-Slide-R2-1.jpg" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Daily Devotions"></div></a>
+                                        <a href="devot_media.html"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Daily-Devotions-Online-Slide-R2-1.jpg" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Daily Devotions"></div></a>
                                     </div>  <!-- col-megamenu.// -->
                                 </div><!-- end col-1 -->
                                 <div class="col-md-3">
@@ -97,17 +97,10 @@
                                     </div>  <!-- col-megamenu.// -->
                                 </div><!-- end col-4 -->
                             </div>
-                            <div class="media_search d-flex align-items-center align-self-center" style="height: 97px; padding: 10px; margin-top: 20px;">
+                            <div class="d-flex justify-content-start align-items-center  megamenu_search_bar">
+                                <i class="fa fa-search"></i>
                                 <a href="search.html">
-                                    <p 
-                                    style="color: #5b5b5b;
-                                    width: 100%; 
-                                    font-size: 18px; 
-                                    font-family: Montserrat;
-                                    font-weight: 300;
-                                    line-height: 1.36;
-                                    letter-spacing: 0px;
-                                    font-style: normal;">Search The Brooklyn Tabernacle Media…</p>
+                                    <p class="megamenu_media_search">Search The Brooklyn Tabernacle Media…</p>
                                 </a>
                             </div>
                         </div>
@@ -117,17 +110,97 @@
             </div> <!-- navbar-collapse.// -->
         </nav>
     </div>
-    <div id="search-form" class="media_search">
+    <form id="search-form" class="media_search">
         <div class="form-group has-search">
-          <span class="fa fa-search form-control-feedback" type="submit" value="Search"></span>
-          <input class="form-control form_input" type="text" id="term" onfocus="this.value=''" value="Search media for title, speaker, keyword, etc...">
+            <span class="fa fa-search form-control-feedback" type="submit" value="Search"></span>
+            <input class="form-control form_input" type="text" id="term" onfocus="this.value=''" placeholder="Search media for title, speaker, keyword, etc...">
+        </div>
+    </form>
+    <div class="divider-search"><hr /></div>
+    <div id="selected_media" class="d-flex justify-content-center align-items-center main_video_section"></div>
+    <div id="search_term" class="search_term col-md-8"></div>
+    <div id="search_results" class="align-items-center align-self-center search_result col-md-8"></div>
+    <div id="category" class="col-md-8"></div>
+    <div id="view_more" class="col-md-8"></div>
+<footer>
+    <div class="flex-row justify-content-center">
+        <div class="d-flex justify-content-start footer-contact">
+            <img width="300" height="76" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-300x76.png" class="image wp-image-3631 attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-200x51.png 200w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-300x76.png 300w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-400x101.png 400w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-600x152.png 600w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-768x194.png 768w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-800x202.png 800w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-1024x259.png 1024w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-1200x304.png 1200w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy-1536x389.png 1536w, https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Footer-Info-copy.png 1695w" sizes="(max-width: 300px) 100vw, 300px">
+        </div>
+        <div class="d-flex justify-content-end footer-social">
+            <span><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="bottom" title="facebook"></a></span>
+            <span><a href="#" class="fa fa-instagram" data-toggle="tooltip" data-placement="bottom" title="instagram"></a></span>
+            <span><a href="#" class="fa fa-youtube-play" data-toggle="tooltip" data-placement="bottom" title="youtube"></a></span>
         </div>
     </div>
-    <div class="divider-search"><hr /></div>
-    <div id="search_term" class="search_term col-md-8"></div>
-    <div id="search_results" class="align-items-center align-self-center search_results col-md-8"></div>
-    <div id="category" class="col-md-8"></div>
-    <div id="read_more" class="col-md-8"></div>
+</footer>
+
+<script>
+
+    // Listen for click event on media tile selection and move to main window
+        document.getElementById('search_results').addEventListener('click', e => {
+        e.preventDefault();
+
+        // capture media ID, title & description on click of tile
+        const current = e.target; // store html target
+        console.log(current);
+        const arr = [current]; // convert to object
+        console.log(arr);
+        const media = arr[0].currentSrc.slice(34, 42); // capture media ID from object property
+
+        // clear previous search results from page
+        function changeMain() {
+
+            // scroll to main video screen
+            window.scrollTo(0, 0);
+            window.scroll({
+                top: 105,
+                left: 0, 
+                behavior: 'smooth'
+            });
+
+            // on click remove current main video
+            $("#selected_media").children().remove();
+
+                // display selected content on main video screen - Individual Media Page (992px x 558px)
+                const html = 
+                    `
+                        <div class="main_video_search_page">
+                            <iframe src ="https://cdn.jwplayer.com/players/${media}-40YHK51f.html" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></iframe>
+                        </div>
+                    `;
+                document.querySelector('#selected_media').insertAdjacentHTML('afterbegin', html);
+        }
+        
+        changeMain();
+        
+    });
+
+    </script>
+    <script>
+            // Listen for click event on search input field and clear page
+            document.getElementById('term').addEventListener('click', e => {
+            e.preventDefault();
+
+            // capture media ID, title & description on click of tile
+            const current = e.target; // store html target
+            const arr = [current]; // convert to object
+            const media = arr[0].currentSrc; // capture media ID from object property
+
+            // clear previous search results from page
+            function newSearch() {
+
+                // on click remove current main video
+                $("#selected_media").children().remove();
+                $("#search_results").children().remove();
+                $("#search_term").children().remove();
+                $("#category").children().remove();
+                $("#view_more").children().remove();
+
+            }
+            newSearch();
+        });
+    </script>
     <script src="search.js"></script>
 </body>
 </html>

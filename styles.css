@@ -5,6 +5,18 @@
     padding: 0;
 }
 
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 .top-bar {
     width: 100%;
     margin: auto;
@@ -22,6 +34,7 @@
     transition: all .2s;
 }
 
+
 .top-bar-right {
     text-decoration: none;
     border-right: 1px solid rgba(0,0,0,0.06);
@@ -37,6 +50,7 @@
     -webkit-transition: all .2s;
     transition: all .2s;
 }
+
 
 .top-bar-right:hover {
     text-decoration: none;
@@ -54,9 +68,11 @@
     transition: all .2s;
 }
 
+
 .top-bar > .justify-content-start {
     margin: auto;
 }
+
 
 .top-bar > .justify-content-end {
     margin: auto;
@@ -68,6 +84,7 @@
     padding: 10px;
     color: white;
 }
+
 
 .contact {
     font-weight: 600;
@@ -91,6 +108,7 @@
     transition: all .2s;
 }
 
+
 .fa {
     font-size: 18px;
     width: 50px;
@@ -99,6 +117,7 @@
     text-decoration: none;
     border: none;
   }
+
   
   /* Add a hover effect if you want */
   .fa:hover {
@@ -131,18 +150,26 @@
     border-bottom: 1px solid;
 }
 
+
 .tooltip .tooltip-inner { 
     background-color: #23282d;
     font-size: 12px;
     opacity: .9;
 }
 
+
+#bt_logo {
+    background: white;
+    height:53px;
+}
+
+
 .logo {
     margin: 20px auto;
     background: white;
-    width: 400px;
     height: 71px;
 }
+
 
 .top_bar {
     margin: 0 auto;
@@ -190,11 +217,13 @@
     border-left: 1px solid #e2e2e2;
 }
 
+
 .dropdown-menu:hover {
     border-radius: 0;
     border-left: 1px solid white;
     border-right: 1px solid white;
 }
+
 
 .title {
     width: 100px;
@@ -204,23 +233,55 @@
     margin-left: -10px;
 }
 
+
 .title-megamenu {
     font-family: Montserrat;
     color: #5b5b5b;
-    padding: 20px 0px 20px 11px;
+    padding: 20px 0px 20px 0px;
     letter-spacing: 0px;
     font-style: normal;
 }
+
 
 .no-right-border {
     border-right: none;
 }
 
+
 .col-megamenu {
     margin-top: -10px;
     margin-bottom: -18px;
     border-right: 1px solid #e2e2e2;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
+    padding-left: 15px;
+}
+
+
+.megamenu_search_bar {
+    height: 75px;
+    padding-top: 10px;
+    margin: 20px 0px 0px -30px;
+    border-top: 2px solid #e2e2e2;
+}
+
+
+.megamenu_media_search {
+    color: #5b5b5b;
+    width: 100%; 
+    font-size: 18px; 
+    line-height: 1.36;
+    font-style: normal;
+    padding-top: 10px;
+    padding-left: 10px;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+
+
+.fa {
+    opacity: .7;
+    padding-top: 3px;
+    padding-left: 25px;
 }
 
 
@@ -236,6 +297,7 @@
     font-style: normal;
 }
 
+
 .submenu-list:hover {
     color: #545454;
     list-style-type: none;
@@ -248,6 +310,7 @@
     font-style: normal;
 }
 
+
 .submenu-list:before {
     content: "\25BA \0020";
     font-size: 9px;
@@ -256,9 +319,11 @@
     left: -1px;
 }
 
+
 .media-item-container {
     margin-top: 0px;
 }
+
 
 .header_shadow {
     background: white;
@@ -269,8 +334,11 @@
 
 .media_search {
     width: 30%;
-    margin: 50px auto;
+    height: 90px; 
+    padding: 10px;
+    margin: 40px auto 0px auto;
 }
+
 
 /* Bootstrap 4 text input with search icon */
 
@@ -278,10 +346,10 @@
     padding-left: 2.375rem;
 }
 
+
 .has-search .form-control-feedback {
     width: 50px;
     font-size: 16px;
-    color: #9ea0a4;
     padding: 7px 0px 0px 10px;
     padding-right: 10px;
     position: absolute;
@@ -294,15 +362,13 @@
     pointer-events: none;
 }
 
+
 .form_input {
     font-size: 16px;
+    font-weight: 500;
     color: #9ea0a4;
     height: 50px;
     padding-left: 40px;
-}
-
-.search_form {
-    margin: 70px;
 }
 
 
@@ -310,13 +376,16 @@
     margin: 40px auto 40px auto;
 }
 
-.search_results {
+
+.search_result {
     margin: 40px auto 50px auto;
 }
+
 
 .search_title_desc {
     padding-left: 20px;
 }
+
 
 .divider-search {
     width: 65%;
@@ -324,19 +393,28 @@
     border-top-width:2px;
     margin-left: auto;
     margin-right: auto;
-    margin-top:25px;
+}
+
+.search_category {  
+    width: 100%;
+    font-size: 13px;
+    color: #212934;
+    margin-left: 10px;
+}
+
+.search_view_more {
+    width: 100%;
+    font-size: 13px;
+    color: #212934;
+    margin-right: 10px;
 }
 
 .search_divider_top {
-    width: 100%;
-    border-color:#e2e2e2;
-    border-top-width:2px;
+    margin-bottom: -15px;
 }
 
 .search_divider_bottom {
-    width: 100%;
-    border-color:#e2e2e2;
-    border-bottom-width:2px;
+    margin-top: -15px;
 }
 
 /* ################## MEDIA BANNERS ################## */
@@ -449,26 +527,55 @@
     background: #ffffff;
 }
 
+
+.truncate_desc {
+    width: 100%;
+    padding:20px 0px 20px 0px; 
+    white-space: nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+}
+
+
+/* ################## Zoom Effects ################## */
+
 .zoom-container {
-    margin-left: 10px;
     width: 100%;
     height: 100%;
     border-radius: 7px;
     overflow: hidden;
   }
 
-  .zoom-container-no-border {
-    margin-left: 10px;
+
+.zoom-container-no-border {
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
 
 
+.zoom_index_list_container {
+    width: 180px;
+    height: 105px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+.zoom_index_current_container {
+width: 720px;
+height: 340px;
+margin-right: 15px;
+margin-bottom: 10px;
+overflow: hidden;
+}
+
+
+
 .zoom {
-    background-size: cover;
     width: 100%;
     height: 100%;
+    background-size: cover;
     -webkit-transition: 2s ease-out;
     -moz-transition: 2s ease-out;
     -o-transition: 2s ease-out;
@@ -480,7 +587,7 @@
 .zoom:hover {
     transition: transform 1s, filter 1.5s ease-in-out;
     transform-origin: center center;
-    transform: scale(1.1); 
+    transform: scale(1.2); 
 }
 
 
@@ -495,8 +602,25 @@ a:hover {
     text-decoration: none;
 }
 
+h2 {
+    color: #212934;
+}
+
+h2:hover {
+    color: #e2e2e2;
+    text-decoration: none;
+}
+
+
+h3:hover {
+    color: #e2e2e2;
+    text-decoration: none;
+}
+
+
 
 /* ################## Individual Media pages ##################  */
+
 .main_player {
     height: 486px;
     margin: 50px auto 20px auto;
@@ -507,6 +631,20 @@ a:hover {
     margin: 20px auto 40px auto;   
 }
 
+.main_video_media_page {
+    width: 992px; 
+    height: 558px; 
+    margin-top:100px;
+    margin-bottom: 120px;
+}
+
+.main_video_search_page {
+    width: 992px; 
+    height: 558px; 
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
 
 .title_desc {
     margin: auto;
@@ -514,42 +652,66 @@ a:hover {
 }
 
 
+.tile_sizing_media {
+    width:320px;
+    height: 180px;
+}
+
+
+.tile_container {
+    width: 84%;
+    margin: 10px auto 10px auto;
+}
+
+.tile_title {
+    width: 320px;
+    margin: 10px auto 30px auto;
+}
+
+
+
+/* ################## Main Media Page ##################  */
+
+
 .single_devo {
-    margin: 140px 35px 10px 35px;
+    margin: 75px 25px 10px 25px;
     text-decoration: none;
 }
 
 
 .multiple_devo {
-    margin: 140px 35px 10px 35px;
+    margin: 75px 25px 10px 25px;
     text-decoration: none;
 }
 
+
 .single_prayer {
-    margin: 130px 35px 10px 35px;
+    margin: 50px 25px 10px 25px;
     text-decoration: none;
 }
 
 
 .multiple_prayer {
-    margin: 130px 35px 10px 35px;
+    margin: 50px 25px 10px 25px;
     text-decoration: none;
 }
 
+
 .single_sunday {
-    margin: 130px 35px 10px 35px;
+    margin: 50px 25px 10px 25px;
     text-decoration: none;
 }
 
 
 .multiple_sunday {
-    margin: 130px 35px 10px 35px;
+    margin: 50px 25px 10px 25px;
     text-decoration: none;
 }
 
+
 .load_more {
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     width: 161px;
     border-color: #777777;
     border-width: 2px;
@@ -565,8 +727,8 @@ a:hover {
 
 
 .load_more:hover {
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     width: 161px;
     border-color: white;
     border-width: 2px;
@@ -582,20 +744,15 @@ a:hover {
 
 
 .divider {
-    width: 72%;
+    width: 80%;
     border-color:#e2e2e2;
     border-top-width:2px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:25px;
+    margin: 20px auto;
 }
 
 
-.tiles {
-    width: 75%;
-    margin: 30px auto 50px auto;
-}
 
+/* ################## Footer ##################  */
 
 footer {
     flex-wrap: wrap;
@@ -615,6 +772,12 @@ footer {
     float: right;
     padding: 50px 300px 0px 0px;
 }
+
+
+
+
+/* ################## Media Queries ##################  */
+
 
 @media (min-width: 1200px) {
 .navbar-expand-xl .navbar-nav .nav-link {
@@ -669,7 +832,7 @@ footer {
     
 } 
 
-@media all and (max-width: 576px) {
+@media all and (max-width: 414px) {
     .navbar{ padding-top: 0; padding-bottom: 0; }
 	.navbar .has-megamenu{position:static!important;}
 	.navbar .megamenu{left:150px; right:0; width:100%; padding:10px; }

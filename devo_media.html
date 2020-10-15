@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunday Worship Service</title>
+    <title>Daily Devotionals</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -81,7 +81,7 @@
                                     <div class="col-md-3">
                                         <div class="col-megamenu">
                                             <h6 class="title-megamenu">Tuesday Prayer Meeting</h6>
-                                            <a href="prayer_media.html"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-24-at-12.50.49-PM.png" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Tuesday Prayer Meetings"></div></a>
+                                            <a href="prayer_media.html"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-24-at-12.50.49-PM.png" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Tuesday devo Meetings"></div></a>
                                         </div> <!-- col-megamenu.// -->
                                     </div><!-- end col-2 -->  
                                     <div class="col-md-3">
@@ -105,25 +105,25 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item nav-uppercase"><a class="nav-link nav-menu-item" href="https://thebrooklyntab.wpengine.com/home-2/prayer-center/page/2/">Prayer</a></li>
+                        <li class="nav-item nav-uppercase"><a class="nav-link nav-menu-item" href="https://thebrooklyntab.wpengine.com/home-2/devo-center/page/2/">devo</a></li>
                     </ul>
                 </div> <!-- navbar-collapse.// -->
             </nav>
         </div>
     </div>
-    <div class="d-flex justify-content-center img-fluid banner sunday-banner"></div>
+    <div class="d-flex justify-content-center img-fluid banner devo-banner"></div>
 
     <!-- Output from JW Delivery API -->
-    <div id="sunday_media_current" class="d-flex justify-content-center align-items-center main_video_section"></div>
+    <div id="devo_media_current" class="d-flex justify-content-center align-items-center main_video_section"></div>
 
     <div class="divider"><hr /></div>
 
-    <div id="sunday_tile_list" class="d-flex flex-row flex-wrap justify-content-around align-items-center tile_container"></div>
+    <div id="devo_tile_list" class="d-flex flex-row flex-wrap justify-content-around align-items-center tile_container"></div>
 
     <script>
 
     // Listen for click event on media tile selection
-        document.getElementById('sunday_tile_list').addEventListener('click', e => {
+        document.getElementById('devo_tile_list').addEventListener('click', e => {
         e.preventDefault();
 
         // capture media ID, title & description on click of tile
@@ -147,7 +147,7 @@
             });
 
             // on click remove current main video
-            $("#sunday_media_current").children().remove();
+            $("#devo_media_current").children().remove();
 
                 // display selected content on main video screen - Individual Media Page (992px x 558px)
                 const html = 
@@ -158,7 +158,7 @@
                             <p>${description}</p>
                         </div>
                     `;
-                document.querySelector('#sunday_media_current').insertAdjacentHTML('afterbegin', html);
+                document.querySelector('#devo_media_current').insertAdjacentHTML('afterbegin', html);
 
         }
         
@@ -186,5 +186,5 @@
             </div>
         </div>
     </footer>
-    <script src="sunday_media.js"></script>
+    <script src="devo_media.js"></script>
 </body>
