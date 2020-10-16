@@ -75,8 +75,8 @@
                                     <div class="col-megamenu">
                                         <h6 class="title-megamenu">Daily Devotions</h6>
                                         <a href="devo_media.html#devo_media_current"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Daily-Devotions-Online-Slide-R2-1.jpg" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Daily Devotions"></div></a>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div><!-- end col-1 -->
+                                    </div> <!-- col-megamenu.// -->
+                                </div><!-- end col-1 --> 
                                 <div class="col-md-3">
                                     <div class="col-megamenu">
                                         <h6 class="title-megamenu">Tuesday Prayer Meeting</h6>
@@ -104,13 +104,13 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item nav-uppercase"><a class="nav-link nav-menu-item" href="https://thebrooklyntab.wpengine.com/home-2/prayer-center/page/2/">Prayer</a></li>
+                    <li class="nav-item nav-uppercase"><a class="nav-link nav-menu-item" href="https://thebrooklyntab.wpengine.com/prayer-center/">Prayer</a></li>
                 </ul>
             </div> <!-- navbar-collapse.// -->
         </nav>
     </div>
     <!--Main Banner-->
-    <div class="d-flex flex-column justify-content-center img-fluid banner media-banner">
+    <div class="d-flex flex-column justify-content-center img-fluid banner media-banner hero">
         <div class="d-flex justify-content-center img-fluid media-title"></div>
         <div class="d-flex justify-content-center flex-wrap media-buttons">
             <a href="index.html#devo_section"><button type="button" class="btn btn-outline-secondary order-1 p-2">Daily Devotions</button></a>
@@ -119,7 +119,9 @@
         </div>
     </div>
     <!--Section-1: Daily Devos-->
-    <div id="devo_section" class="d-flex flex-wrap justify-content-center">
+    <div id="devo_section"></div> 
+    <div class="devo_header d-flex justify-content-center img-fluid"></div>
+    <div class="d-flex flex-wrap justify-content-center">
         <div id="devo_current" class="order-1 p-2 col-md-4 single_devo"></div>
         <div id="devo_list" class="order-2 p-2 col-md-4 multiple_devo"></div>
     </div>
@@ -129,23 +131,26 @@
     <div class="divider"><hr /></div>
 
     <!--Section-2: Prayer Meeting-->
-    <div id="prayer_section" class="d-flex flex-wrap justify-content-center">
+    <div id="prayer_section"></div> 
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="prayer_header"></div>
         <div id="prayer_list" class="order-1 p-2 col-md-4 multiple_prayer"></div>
         <div id="prayer_current" class="order-2 p-2 col-md-4 single_prayer"></div>
     </div>
     <div class="d-flex justify-content-center">
         <a href="prayer_media.html#prayer_media_current"><button type="button" class="btn btn-outline-secondary load_more">Load More</button></a>
     </div>
-
     <div class="divider"><hr /></div>
 
     <!--Section-3: Sunday Worship-->
-    <div id="sunday_section" class="d-flex flex-wrap justify-content-center">
+    <div id="sunday_section"></div> 
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="sunday_header"></div>
         <div id="sunday_current" class="order-1 p-2 col-md-4 single_sunday"></div>
         <div id="sunday_list" class="order-2 p-2 col-md-4 multiple_sunday"></div>
     </div>
     <div class="d-flex justify-content-center">
-        <a href="sunday_media.html#sunday_media_current"><button type="button" class="btn btn-outline-secondary load_more">Load More</button></a>
+        <a href="devo_media.html#devo_media_current"><button type="button" class="btn btn-outline-secondary load_more">Load More</button></a>
     </div>
     <script>
         // Prevent closing from click inside dropdown
@@ -166,7 +171,7 @@
         const logo = $('#bt-logo');
 
         $(window).on('scroll', function () {   
-            if ($(window).scrollTop() > 50) { 
+            if ($(window).scrollTop() > 100) { 
                 header.addClass('scrolled'); 
                 logo.attr('src', 'BT-Logo100.png'); 
             } else { 
@@ -175,7 +180,7 @@
             } 
         });
     </script>
-        
+       
     <footer>
         <div class="flex-row justify-content-center">
             <div class="d-flex justify-content-start footer-contact">

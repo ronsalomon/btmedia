@@ -105,17 +105,19 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item nav-uppercase"><a class="nav-link nav-menu-item" href="https://thebrooklyntab.wpengine.com/home-2/prayer-center/page/2/">Prayer</a></li>
+                    <li class="nav-item nav-uppercase"><a class="nav-link nav-menu-item" href="https://thebrooklyntab.wpengine.com/prayer-center/">Prayer</a></li>
                 </ul>
             </div> <!-- navbar-collapse.// -->
         </nav>
     </div>
-    <form id="search-form" class="media_search">
-        <div class="form-group has-search">
-            <span class="fa fa-search form-control-feedback" type="submit" value="Search"></span>
-            <input class="form-control form_input" type="text" id="term" onfocus="this.value=''" placeholder="Search media for title, speaker, keyword, etc...">
-        </div>
+    <div class="form_position">
+        <form id="search-form" class="media_search">
+            <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback" type="submit" value="Search"></span>
+                <input class="form-control form_input" type="text" id="term" onfocus="this.value=''" placeholder="Search media for title, speaker, keyword, etc...">
+            </div>
     </form>
+    </div>
     <div class="divider-search"><hr /></div>
     <div id="selected_media" class="d-flex justify-content-center align-items-center main_video_section"></div>
     <div id="search_term" class="search_term col-md-8"></div>
@@ -208,7 +210,7 @@
         const logo = $('#bt-logo');
 
         $(window).on('scroll', function () {   
-            if ($(window).scrollTop() > 50) { 
+            if ($(window).scrollTop() > 100) { 
                 header.addClass('scrolled'); 
                 logo.attr('src', 'BT-Logo100.png'); 
             } else { 

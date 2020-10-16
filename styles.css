@@ -253,6 +253,17 @@ html {
 }
 
 
+.devo_mega_img {
+    background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Daily-Devotions-Online-Slide-R2-1.jpg');
+    width: 331px;
+    height:186px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
 .megamenu_search_bar {
     height: 75px;
     padding-top: 10px;
@@ -437,7 +448,7 @@ html {
     background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Page-Header-B-copy-scaled.jpg');
     background-position: bottom;
     opacity: 1;
-    filter: blur(0px);
+
 }
 
 
@@ -459,7 +470,6 @@ html {
 .sunday-banner {
     background-image: url('https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Sunday-Worship-Online-WebPageBanner-R3.jpg');
 }
-
 
 .media-title {
     margin: 0px auto 0px auto;
@@ -551,19 +561,20 @@ html {
   }
 
 
-.zoom_index_list_container {
-    width: 180px;
-    height: 105px;
-    margin-right: 15px;
+.zoom_index_list {
+    width: 220px;
+    height: 85px;
+    margin-right: 10px;
     margin-bottom: 10px;
     overflow: hidden;
   }
 
+
 .zoom_index_current_container {
-width: 720px;
-height: 100%;
-margin-bottom: 10px;
-overflow: hidden;
+    width: 720px;
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 
@@ -669,45 +680,92 @@ h3:hover {
 /* ################## Main Media Page ##################  */
 
 
+#devo_section {
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+.devo_header {
+    margin: 50px auto 50px auto;
+    width: 100%;
+    height: 85px;
+    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Daily-Devotions-Header.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .single_devo {
-    margin: 120px 0px 10px 0px;
+    margin: 0px 20px 0px 0px;
+    text-decoration: none;
+}
+
+.multiple_devo {
+    margin: 0px 0px 0px 20px;
     text-decoration: none;
 }
 
 
-.multiple_devo {
-    margin: 120px 0px 45px 45px;
-    text-decoration: none;
+
+#prayer_section {
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+.prayer_header {
+    margin: 0px auto 50px auto;
+    width: 100%;
+    height: 85px;
+    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Tuesday-Prayer-Header.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
 .single_prayer {
-    margin: 60px 20px 10px 0px;
+    margin: 0px 0px 0px 20px;
     text-decoration: none;
 }
 
 
 .multiple_prayer {
-    margin: 60px 20px 10px 20px;
+    margin: 0px 20px 0px 0px;
     text-decoration: none;
 }
 
 
+#sunday_section {
+    margin-top: 0px; 
+    margin-bottom: 50px;
+}
+
+.sunday_header {
+    margin: 0px auto 50px auto;
+    width: 100%;
+    height: 85px;
+    background-image: url("https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Sunday-Services-Header.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 .single_sunday {
-    margin: 60px 0px 10px 40px;
+    margin: 0px 20px 0px 0px;
     text-decoration: none;
 }
 
 
 .multiple_sunday {
-    margin: 60px 10px 10px 30px;
+    margin: 0px 0px 0px 20px;
     text-decoration: none;
 }
 
 
 .load_more {
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 161px;
     border-color: #777777;
     border-width: 2px;
@@ -724,7 +782,7 @@ h3:hover {
 
 .load_more:hover {
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 161px;
     border-color: white;
     border-width: 2px;
@@ -743,9 +801,8 @@ h3:hover {
     width: 80%;
     border-color:#e2e2e2;
     border-top-width:2px;
-    margin: 10px auto;
+    margin: auto;
 }
-
 
 
 /* ################## Footer ##################  */
@@ -784,10 +841,15 @@ footer {
     }
 }
 
+@media (max-width: 1200px) {
+.navbar-toggler {margin-bottom: 10px;}
+}
+
 @media all and (min-width: 992px) {
     .navbar{ padding-top: 0; padding-bottom: 0; }
 	.navbar .has-megamenu{position:static!important;}
-	.navbar .megamenu{left:600px; right:0; width:100%; padding:0px;}
+    .navbar .megamenu{left:600px; right:0; width:100%; padding:0px;}
+    .media_search {width: 400px; height: 90px; padding: 10px; margin: 40px auto 0px auto; }
 	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
     .navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .nav-link{ color: #ccad39; }
@@ -799,13 +861,15 @@ footer {
 @media all and (max-width: 768px) {
     .navbar{ padding-top: 0; padding-bottom: 0; }
 	.navbar .has-megamenu{position:static!important;}
-	.navbar .megamenu{left:150px; right:0; width:100%; padding:10px; }
+    .navbar .megamenu{left:150px; right:0; width:100%; padding:10px; }
+    .media_search {width: 400px; height: 90px; padding: 10px; margin: 40px auto 0px auto; }
 	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
     .navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .nav-link{ color: #5b5b5b;  }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
     .navbar .nav-item .dropdown-menu { margin: 0px auto auto 0px;  padding: 10px 0px 20px 30px;}
-    
+    .navbar-light .navbar-toggler { color: rgba(0,0,0,.5); border-color: rgba(0,0,0,.1); margin-bottom: 10px; }
+            
     .nav-menu-item:hover {
         width: 100%;
         border: none;
@@ -830,8 +894,9 @@ footer {
 
 @media all and (max-width: 576px) {
     .navbar{ padding-top: 0; padding-bottom: 0; }
-	.navbar .has-megamenu{position:static!important;}
-	.navbar .megamenu{left:150px; right:0; width:100%; padding:10px; }
+	.navbar .has-megamenu{ position:static!important;}
+    .navbar .megamenu{ left:150px; right:0; width:100px; padding:10px; }
+    .media_search {width: 350px; height: 90px; padding: 10px; margin: 40px auto 0px auto; }
 	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
     .navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .nav-link{ color: #5b5b5b;  }
