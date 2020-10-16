@@ -29,10 +29,10 @@
             <span class="button-default"><a class="no-left-border" href="https://thebrooklyntab.wpengine.com/shop-online/"></a>Giving</span>
         </div>
     </div>
-    <div class="sticky-top header_shadow">
-            <div class="d-flex justify-content-center img-fluid logo">
-                <a href="index.html"><img src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Brooklyn-Tabernacle-Logo-800.png" class="img-fluid" width="400" height="71" alt="BT Online Logo"></a>
-            </div>
+    <div class="sticky-top header_shadow header">
+        <div class="d-flex justify-content-center">
+            <a href="index.html"><img  class="logo" id="bt-logo" src="BT-Logo-800.png"></a>
+        </div>
         <!---- Responsive Navbar - Right Hamburger Menu ---->
         <nav class="navbar navbar-expand-xl navbar-light">
             <a class="navbar-brand" href="#"></a>
@@ -75,25 +75,25 @@
                                 <div class="col-md-3">
                                     <div class="col-megamenu">
                                         <h6 class="title-megamenu">Daily Devotions</h6>
-                                        <a href="devot_media.html"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Daily-Devotions-Online-Slide-R2-1.jpg" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Daily Devotions"></div></a>
+                                        <a href="devo_media.html#devo_media_current"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Daily-Devotions-Online-Slide-R2-1.jpg" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Daily Devotions"></div></a>
                                     </div>  <!-- col-megamenu.// -->
                                 </div><!-- end col-1 -->
                                 <div class="col-md-3">
                                     <div class="col-megamenu">
                                         <h6 class="title-megamenu">Tuesday Prayer Meeting</h6>
-                                        <a href="prayer_media.html"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-24-at-12.50.49-PM.png" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Tuesday Prayer Meetings"></div></a>
+                                        <a href="prayer_media.html#prayer_media_current"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-24-at-12.50.49-PM.png" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Tuesday Prayer Meetings"></div></a>
                                     </div> <!-- col-megamenu.// -->
                                 </div><!-- end col-2 -->  
                                 <div class="col-md-3">
                                     <div class="col-megamenu">
                                         <h6 class="title-megamenu">Sunday Worship Service</h6>
-                                        <a href="sunday_media.html"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-24-at-11.02.05-AM.png" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Sunday Worship Services"></div></a>
+                                        <a href="sunday_media.html#sunday_media_current"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-24-at-11.02.05-AM.png" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Sunday Worship Services"></div></a>
                                     </div>  <!-- col-megamenu.// -->
                                 </div><!-- end col-3 -->
                                 <div class="col-md-3">
                                     <div class="col-megamenu">
                                         <h6 class="title-megamenu">Audio Sermons</h6>
-                                        <a href="audio_media.html"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Audio-Sermons-Online-Slide.jpg" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Audio Sermon MP3s"></div></a>
+                                        <a href="audio_media.html#audio_media_current"><div class="zoom-container"><img class="zoom" src="https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/08/Audio-Sermons-Online-Slide.jpg" width="331" height="186" class="img-fluid rounded mx-auto d-block" alt="Audio Sermon MP3s"></div></a>
                                     </div>  <!-- col-megamenu.// -->
                                 </div><!-- end col-4 -->
                             </div>
@@ -133,9 +133,7 @@
             <span><a href="#" class="fa fa-youtube-play" data-toggle="tooltip" data-placement="bottom" title="youtube"></a></span>
         </div>
     </div>
-</footer>
-
-<script>
+    <script>
 
     // Listen for click event on media tile selection and move to main window
         document.getElementById('search_results').addEventListener('click', e => {
@@ -154,7 +152,7 @@
             // scroll to main video screen
             window.scrollTo(0, 0);
             window.scroll({
-                top: 105,
+                top: 50,
                 left: 0, 
                 behavior: 'smooth'
             });
@@ -166,7 +164,9 @@
                 const html = 
                     `
                         <div class="main_video_search_page">
-                            <iframe src ="https://cdn.jwplayer.com/players/${media}-40YHK51f.html" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></iframe>
+                            <div style="position:relative; overflow:hidden; padding-bottom:56.25%">
+                                <iframe src ="https://cdn.jwplayer.com/players/${media}-40YHK51f.html" width="100%" height="100%" frameborder="0" scrolling="auto" style="position:absolute;" allowfullscreen></iframe>
+                            </div>
                         </div>
                     `;
                 document.querySelector('#selected_media').insertAdjacentHTML('afterbegin', html);
@@ -201,6 +201,23 @@
             newSearch();
         });
     </script>
+
+    <!--Change logo on page scroll-->
+    <script>
+        const header = $('header');
+        const logo = $('#bt-logo');
+
+        $(window).on('scroll', function () {   
+            if ($(window).scrollTop() > 50) { 
+                header.addClass('scrolled'); 
+                logo.attr('src', 'BT-Logo100.png'); 
+            } else { 
+                header.removeClass('scrolled'); 
+                logo.attr('src', 'BT-Logo-800.png'); 
+            } 
+        });
+    </script>
+</footer>
     <script src="search.js"></script>
 </body>
 </html>

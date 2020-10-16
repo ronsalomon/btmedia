@@ -18,13 +18,13 @@ fetchDevoMain()
         const current_html = 
             ` 
                 <a href="devo_media.html#devo_media_current" alt="daily devotional">
-                    <div class="d-flex flex-wrap align-items-center align-self-center">
+                    <div class="d-flex flex-wrap align-items-center align-self-center" style="margin-left: 35px; margin-right: 35px">
                         <div class="zoom_index_current_container">
                             <img class="img-fluid zoom" src ="https://cdn.jwplayer.com/v2/media/${current.mediaid}/poster.jpg" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></img>
                         </div>
                         <div style="margin: 15px auto; color: #212529;"><h3>${current.title}</h3></div>
                     </div>
-                    <p>${current.description}</p>
+                    <p style="margin-left: 35px; margin-right: 35px">${current.description}</p>
                 </a>
             `;
         document.querySelector('#devo_current').insertAdjacentHTML('afterbegin', current_html);
@@ -71,11 +71,13 @@ fetchDevoTiles()
      // display current content - Individual Media Page (992px x 558px)
         const current_html = 
             `
-                <div class="main_video_media_page">
-                    <iframe src ="https://cdn.jwplayer.com/players/${current.mediaid}-40YHK51f.html" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></iframe>
-                    <p><h4>${current.title}</h4></p>
-                    <p>${current.description}</p>
+            <div class="main_video_media_page">
+                <div style="position:relative; overflow:hidden; padding-bottom:56.25%">
+                    <iframe src="https://cdn.jwplayer.com/players/sX5mUe4T-BI9bjUiV.html" width="100%" height="100%" frameborder="0" scrolling="auto" title="Daily Devotions" style="position:absolute;" allowfullscreen></iframe>
                 </div>
+                <p><h4>${current.title}</h4></p>
+                <p>${current.description}</p>
+            </div>
             `;
         document.querySelector('#devo_media_current').insertAdjacentHTML('afterbegin', current_html);
 
