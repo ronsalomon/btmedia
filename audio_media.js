@@ -85,12 +85,15 @@ fetchAudioTiles()
         data.playlist.slice(0, 99).reverse().forEach(tile => {
         const tile_html = 
             `
-                <div class="zoom-container-no-border" style="width: 320px; height:225px; margin-top: 20px;">
-                    <img class="img-fluid zoom tile_sizing_media" src="https://cdn.jwplayer.com/v2/media/${tile.mediaid}/poster.jpg" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></img>
-                    <p>${tile.title}</p>
-                    <p>${tile.description}</p>
+                <div class="tile_video_media_page">
+                    <div class="zoom-container-no-border" style="position:relative;">
+                        <img class="img-fluid zoom" src="https://cdn.jwplayer.com/v2/media/${tile.mediaid}/poster.jpg" width="100%" height="100%" frameborder="0" scrolling="auto" style="position:absolute;" allowfullscreen></img>
+                        <p class="tile_title" style="visibility: hidden;">${tile.title}</p>
+                        <p>${tile.description}</p>
+                    </div>
+                    <p class="tile_title">${tile.title}</p>
                 </div>
-            ` ;
+        ` ;
         document.querySelector('#audio_tile_list').insertAdjacentHTML('afterbegin', tile_html);
         }); 
     }).catch(err => console.log('rejected', err.message)); 

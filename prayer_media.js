@@ -35,13 +35,13 @@ fetchPrayerMain()
 
         const list_html = 
             `
-                <a href="devo_media.html#devo_media_current" alt="prayer meeting">
-                    <div class="d-flex justify-content-between align-items-center align-self-center">
+                <a href="prayer_media.html#prayer_media_current" alt="prayer meeting">
+                    <div class="d-flex align-items-center align-self-center">
                         <div class="zoom_index_list">
                             <img class="img-fluid zoom" src="https://cdn.jwplayer.com/v2/media/${recent.mediaid}/poster.jpg?width=320" width="100%" height="100%" frameborder="0"></img>
                         </div>
-                        <div><h3>${recent.title}</h3></div>
-                    </div>
+                        <h3 style="width: 375px;">${recent.title}</h3>
+                      </div>
                     <p style="padding-top: 10px; padding-bottom: 20px; overflow: hidden;">${recent.description}</p>
                 <a>
             `;
@@ -85,10 +85,13 @@ fetchPrayerTiles()
         data.playlist.slice(0, 99).reverse().forEach(tile => {
         const tile_html = 
             `
-                <div class="zoom-container-no-border" style="width: 320px; height:225px; margin-top: 20px;">
-                    <img class="img-fluid zoom tile_sizing_media" src="https://cdn.jwplayer.com/v2/media/${tile.mediaid}/poster.jpg" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></img>
-                    <p>${tile.title}</p>
-                    <p>${tile.description}</p>
+                <div class="tile_video_media_page">
+                    <div class="zoom-container-no-border" style="position:relative;">
+                        <img class="img-fluid zoom" src="https://cdn.jwplayer.com/v2/media/${tile.mediaid}/poster.jpg" width="100%" height="100%" frameborder="0" scrolling="auto" style="position:absolute;" allowfullscreen></img>
+                        <p class="tile_title" style="visibility: hidden;">${tile.title}</p>
+                        <p>${tile.description}</p>
+                    </div>
+                    <p class="tile_title">${tile.title}</p>
                 </div>
             ` ;
         document.querySelector('#prayer_tile_list').insertAdjacentHTML('afterbegin', tile_html);

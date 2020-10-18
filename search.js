@@ -66,17 +66,16 @@ const searchResults = document.getElementById('search_results');
                             </a>
                             <!--Title & Description-->
                             <div class="col-md-8" style="margin-left: 15px;">
-                                <a href="http://localhost:5500/search.html#search_page_current"><h2 style="font-weight:500;">${item.title}</h2></a>
+                                <h2 style="font-weight:500;">${item.title}</h2>
                                 <p style="white-space: nowrap; overflow:hidden; text-overflow:ellipsis; width: 100%;">${item.description}</p>
                             </div>
                         </div>
                         <!--Read More Divider-->
                         <div class="search_divider_top"><hr /></div>
+
+                        <!--Read More Divider-->
                         <div class="d-flex bd-highlight mb-3" style="margin-top: -15px;">
-                            <div id="category" class="mr-auto p-2 bd-highlight" style="font-size: 13px; color: #212934;">Category: ${item.tags}</div>
-                            <a href="https://cdn.jwplayer.com/players/${item.mediaid}-40YHK51f.html">
-                                <div id="view_more" class="ml-auto p-2 bd-highlight" style="font-size: 13px; color: #212934;">View More ></div>
-                            </a>
+                            <div id="category" class="mr-auto p-2 bd-highlight" style="font-size: 13px; color: #212934;">Keywords: ${item.tags}</div>
                         </div>
                         <div class="search_divider_bottom"><hr /></div>
                     `;
