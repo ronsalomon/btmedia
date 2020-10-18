@@ -255,7 +255,7 @@ html {
     height:186px;
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 
@@ -424,10 +424,10 @@ html {
     background-color:rgba(255,255,255,0);
     background-position: center;
     background-repeat:no-repeat;
-    -webkit-background-size:contain;
-    -moz-background-size:contain;
-    -o-background-size:contain;
-    background-size:contain;  
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;  
 }
 
 
@@ -880,6 +880,20 @@ footer {
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
     .navbar .nav-item .dropdown-menu { margin: 0px auto auto 0px;  padding: 10px 0px 20px 30px;}
     .navbar-light .navbar-toggler { color: rgba(0,0,0,.5); border-color: rgba(0,0,0,.1); margin-bottom: 10px;  margin-right: 10px; }
+
+    .banner {
+        width: 100%;
+        margin: auto;
+        height: 400px;
+        background-attachment:fixed;
+        background-color:rgba(255,255,255,0);
+        background-position: center;
+        background-repeat:no-repeat;
+        -webkit-background-size:contain;
+        -moz-background-size:contain;
+        -o-background-size:contain;
+        background-size:contain;  
+    }
             
     .nav-menu-item:hover {
         width: 100%;
@@ -1022,6 +1036,21 @@ footer {
 	.navbar .nav-item:hover .nav-link{ color: #5b5b5b;  }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
     .navbar .nav-item .dropdown-menu { margin: 0px auto auto 0px;  padding: 10px 0px 20px 30px;}
+
+    .banner {
+        width: 100%;
+        margin: auto;
+        height: 400px;
+        background-attachment:fixed;
+        background-color:rgba(255,255,255,0);
+        background-position: center;
+        background-repeat:no-repeat;
+        -webkit-background-size:contain;
+        -moz-background-size:contain;
+        -o-background-size:contain;
+        background-size:contain;  
+    }
+    
     
     .nav-menu-item:hover {
         width: 100%;
@@ -1045,10 +1074,10 @@ footer {
         height: 400px;
         background-image: url(https://thebrooklyntab.wpengine.com/wp-content/uploads/2020/07/Media-Page-Header-B-copy-scaled.jpg);
         background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
     }
 
     .media-title {
